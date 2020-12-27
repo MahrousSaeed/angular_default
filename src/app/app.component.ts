@@ -8,15 +8,8 @@ import {FormControl,FormGroup} from '@angular/forms'
 })
 export class AppComponent implements OnInit {
   title = 'angular';
-  myForm:FormGroup
   ngOnInit(){
-    this.myForm = new FormGroup({
-      email:new FormControl(""),
-      password: new FormControl("")
-    })
+
   }
-  onSubmit = (data) => {
-    console.log(data.value);
-    
-  }
+
 }
