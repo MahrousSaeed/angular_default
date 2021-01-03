@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {SubjectsService} from '../../../subjects.service'
 
 @Component({
   selector: 'app-profile',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service:SubjectsService) {
 
+  }
   ngOnInit(): void {
+    this.service.userData.subscribe(res => {
+      console.log('from profile com',res);
+      
+    })
   }
 
 }

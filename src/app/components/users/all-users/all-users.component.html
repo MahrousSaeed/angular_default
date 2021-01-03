@@ -12,3 +12,10 @@
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+<ul>
+    <li *ngFor="let user of users" (click)="sendUser(user)" >
+        {{user}}
+    </li>
+    <app-profile></app-profile>
+   
+</ul>
